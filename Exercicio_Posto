@@ -1,0 +1,104 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		const cadeia PERGUNTA = "Deseja informar a litragem ou o valor para abastecimento \n1- Litros | 2- Valor"
+		
+		inteiro combustivel, opcao
+		real valor, litros, pagar
+
+		escreva("Combustível desejado:\n" + 
+			   "1- Gasolina Comum\n" + 
+			   "2- Gasolina Aditivada\n" + 
+			   "3- Etanol\n" + 
+			   "4- Díesel\n")
+		leia( combustivel )
+
+		escolha ( combustivel )
+		{
+			caso 1:
+				valor = 5.199
+				//Gasolina Comum
+				escreva(PERGUNTA)
+				leia( opcao )
+				se ( opcao == 1 )
+				{
+					escreva("Quantos litros?\n")
+					leia( litros )
+					escreva("Total a pagar: " , ( litros * valor ) )
+				} senao {
+					se ( opcao == 2 ) 
+					{
+						escreva("Qual o valor?\n")
+						leia( pagar )
+						escreva("Total abastecido: ", ( pagar / valor ) ) 
+					} senao 
+						escreva("Opção inválida")
+				}
+				pare
+			caso 2:
+				valor = 5.229
+				//Gasolina Aditivada
+				escreva(PERGUNTA)
+				leia( opcao )
+				se ( opcao == 1 )
+				{
+					escreva("Quantos litros?\n")
+					leia( litros )
+					escreva("Total a pagar: ", ( litros * valor ) )
+				} senao {
+					se ( opcao == 2 )
+					{
+						escreva("Qual o valor?\n")
+						leia( pagar )
+						escreva("Total abastecido: ", ( pagar / valor ) )
+					} senao
+						escreva("Opção inválida")
+				}
+				pare
+			caso 3:
+				valor = 4.999
+				//Etanol
+				escreva(PERGUNTA)
+				leia( opcao )
+				se ( opcao == 1 )
+				{
+					escreva("Quantos litros?\n")
+					leia( litros )
+					escreva("Total a pagar: " ,( litros * valor ) ) 
+				} senao {
+					se ( opcao == 2 )
+					{
+						escreva("Qual o valor?\n")
+						leia( pagar )
+						escreva("Total abastecido: " ( pagar / valor ) ) 
+					} senao
+						escreva("Opção inválida")
+				}
+				pare
+			caso 4:
+				valor = 6.299
+				//Díesel
+				escreva(PERGUNTA)
+				leia( opcao )
+				se ( opcao == 1 )
+				{
+					escreva("Quantos litros?\n")
+					leia( litros )
+					escreva("Total a pagar: ", ( litros * valor ) )
+				}senao {
+					se ( opcao == 2 ) 
+					{
+						escreva("Qual o valor?\n")
+						leia( pagar )
+						escreva("Total abastecido: " , ( pagar / valor ) ) 
+					}senao 
+						escreva("Opção inválida")
+				}
+				pare
+			caso contrario:
+				escreva("Opção inválida")
+		}
+	}
+}
