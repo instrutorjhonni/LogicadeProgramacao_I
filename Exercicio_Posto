@@ -72,7 +72,7 @@ programa
 					{
 						escreva("Qual o valor?\n")
 						leia( pagar )
-						escreva("Total abastecido: " ( pagar / valor ) ) 
+						escreva("Total abastecido: ", ( pagar / valor ) ) 
 					} senao
 						escreva("Opção inválida")
 				}
